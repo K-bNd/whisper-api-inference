@@ -7,6 +7,8 @@ services:
     environment:
       - PORT=80
       - DOCKER_BUILDKIT=1
+      - DEEPL_KEY=<insert your DeepL API key>
+      - SERVER_URL=<insert your domain here>
     ports:
       - 80:80
     command:

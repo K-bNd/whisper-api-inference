@@ -18,3 +18,11 @@ You will need to have the following as environnment variables:
 
 - DEEPL_KEY: DeepL API key for translation
 - SERVER_URL: URL where the API is accesible
+
+You can set them in the compose.yaml file.
+
+## Usage
+
+```bash
+docker-compose -f compose.yaml up
+```
