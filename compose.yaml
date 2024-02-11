@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fastapi-application
+    environment:
+      - PORT=80
+      - DOCKER_BUILDKIT=1
+    ports:
+      - 80:80
+    command:
+      ["uvicorn", "app:app", "--host", "0.0.0.0", "--reload", "--port", "80"]
+    restart: "no"

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Audio Transcription App</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Audio Transcription using Whisper</h1>
+      <p>
+        Transcribe audio with our awesome AI model! Model:
+        <a
+          href="https://github.com/guillaumekln/faster-whisper/"
+          rel="noreferrer"
+          target="_blank"
+          >guillaumekln/faster-whisper/
+        </a>
+      </p>
+    </header>
+
+    <main>
+      <section id="transcription-section">
+        <h2>Transcribe Audio</h2>
+        <form id="transcription-form" enctype="multipart/form-data">
+          <!-- Allow users to input audio URL -->
+          <label for="audioUrl">Audio URL:</label>
+          <input type="text" id="audioUrl" name="audioUrl" />
+
+          <!-- Allow users to upload their own audio files -->
+          <label for="audioFile">Upload Audio File:</label>
+          <input
+            type="file"
+            id="audioFile"
+            name="audioFile"
+            accept=".mp3, .mp4, audio/*, video/*"
+          />
+
+          <input type="submit" value="Transcribe" />
+        </form>
+
+        <div id="transcription-result">
+          <!-- Transcription result will be displayed here -->
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; Audio Transcription using Whisper</p>
+    </footer>
+  </body>
+  <script src="/static/script.js"></script>
+</html>
